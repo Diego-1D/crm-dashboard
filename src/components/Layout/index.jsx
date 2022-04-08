@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+import Sidebar from '../Sidebar';
+import { Container, Wrapper } from './styles';
 
 const Layout = () => {
-  return (
-    <div>Hello word</div>
-  )
+    return (
+        <Container>
+            <Sidebar />
+            <Wrapper>
+
+            </Wrapper>
+        </Container>
+    )
 }
 
 export default Layout;
