@@ -1,5 +1,6 @@
 import React from 'react';
 import DashboardCard from '../../components/DashboardCard';
+import Table from '../../components/Table';
 import {
     Container,
     Title,
@@ -11,8 +12,9 @@ const Dashboard = () => {
         <Container>
             <Title>Dashboard</Title>
             <Wrapper>
-            <DashboardCard/>
+                <DashboardCard />                
             </Wrapper>
+            <Table/>
         </Container>
     )
 }
