@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    width: 250px;
     height: 100vh;
-    position: fixed;
+    position: sticky;
     background-color: #3D36CA;
-    min-width: 250px;
     padding: 40px 20px;
+    box-shadow: rgba(149, 157, 165, 1) 3px 3px 30px;
 `;
 
 export const HeaderOptions = styled.div`

@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-    width: 180px;
-    height: 110px;
+    width: 200px;
+    height: 130px;
     border-radius: 10px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     background-color: #FFF;
     padding: 20px;
-    line-height: 0px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 `;
 
