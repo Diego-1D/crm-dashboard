@@ -1,18 +1,21 @@
 import React from 'react';
-import Dashboard from '../../pages/Dashboard';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from '../../routes';
 import Navbar from '../Navbar';
 import Sidebar from '../Sidebar';
 import { Container, Wrapper } from './styles';
 
 const Layout = () => {
     return (
-        <Container>
-            <Sidebar />
-            <Wrapper>
-                <Navbar />
-                <Dashboard />
-            </Wrapper>
-        </Container>
+        <BrowserRouter>
+            <Container>
+                <Sidebar />
+                <Wrapper>
+                    <Navbar />
+                    <Routes />
+                </Wrapper>
+            </Container>
+        </BrowserRouter>
     )
 }
 

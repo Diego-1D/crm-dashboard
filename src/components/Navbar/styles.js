@@ -11,6 +11,7 @@ export const Container = styled.div`
 export const Text = styled.label`
    font-size: 1.2rem;
    font-weight: bold;
+   color: #261F5B;
 `;
 
 export const RightArea = styled.div`
@@ -20,7 +21,7 @@ export const RightArea = styled.div`
 `;
 
 export const Search = styled.div`
-    width: 230px;
+    width: 300px;
     height: 45px;
     padding: 0 15px;
     display: flex;

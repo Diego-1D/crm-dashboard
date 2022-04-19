@@ -9,11 +9,12 @@ export const Card = styled.div`
     flex-direction: column;
     background-color: #FFF;
     padding: 20px;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(149, 157, 165, 0.5) 0px 8px 24px;
 `;
 
 export const Icon = styled.i`
     font-size: 2.5rem;
+    color: #7A90A3;
 `;
 
 export const Name = styled.h3`
@@ -23,4 +24,5 @@ export const Name = styled.h3`
 export const Value = styled.p`
     font-size: 1.2rem;
     font-weight: bold;
+    color: #7A90A3;
 `;
