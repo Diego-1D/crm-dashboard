@@ -1,22 +1,35 @@
 import React from 'react';
-import { Container, HeaderOptions, Icon, Title } from './styles';
+import {
+  Container,
+  Header,
+  HeaderOptions,
+  Icon,
+  Name,
+  Title
+} from './styles';
 
 import Items from '../../data/sidebar_routes.json';
 
 const Sidebar = () => {
 
-
   return (
     <Container>
+      <Header>
+        <Icon
+          className='bx bxs-store-alt'
+          style={{ fontSize: '2.5rem' }}
+        />
+        <Name>CRM - Client</Name>
+      </Header>
       {
         Items.map((item, index) => (
-          <div key={index}>
-            <HeaderOptions
-            >
-              {/* <Icon>{item.icon}</Icon> */}
-              <Title>{item.display_name}</Title>
-            </HeaderOptions>
-          </div>
+          <HeaderOptions
+            to={item.route}
+            key={index}
+          >
+            <Icon className={item.icon} />
+            <Title>{item.display_name}</Title>
+          </HeaderOptions>
         ))
       }
     </Container>
