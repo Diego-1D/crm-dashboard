@@ -8,6 +8,8 @@ export const Container = styled.div`
     background-color: #250BA2;
     padding: 50px 20px;
     box-shadow: rgba(149, 157, 165, 1) 3px 3px 30px;
+    top: 0;
+    bottom: 0;
 `;
 
 export const Header = styled.div`
