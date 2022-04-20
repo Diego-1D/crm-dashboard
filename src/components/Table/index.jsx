@@ -1,41 +1,25 @@
 import React from 'react';
-import {TableArea, Title, Body} from './styles';
+import { Column, Line, TableArea, Title, Body, Head, HeadTitle } from './styles';
+
+import TopCustomers from '../../data/top-customers.json';
 
 const Table = () => {
   return (
     <TableArea>
-      <Title>Top Customers</Title>
+      <Head>
+        <HeadTitle style={{textAlign:'left'}}>Cliente</HeadTitle>
+        <HeadTitle>Total de pedidos</HeadTitle>
+        <HeadTitle>Total de gastos</HeadTitle>
+      </Head>
       <Body>
-        <tr>
-          <td>Diego Fernandes</td>
-          <td>490</td>
-          <td>$15,870</td>
-        </tr>
-        <tr>
-          <td>Diego Fernandes</td>
-          <td>490</td>
-          <td>$15,870</td>
-        </tr>
-        <tr>
-          <td>Diego Fernandes</td>
-          <td>490</td>
-          <td>$15,870</td>
-        </tr>
-        <tr>
-          <td>Diego Fernandes</td>
-          <td>490</td>
-          <td>$15,870</td>
-        </tr>
-        <tr>
-          <td>Diego Fernandes</td>
-          <td>490</td>
-          <td>$15,870</td>
-        </tr>
-        <tr>
-          <td>Diego Fernandes</td>
-          <td>490</td>
-          <td>$15,870</td>
-        </tr>
+        {TopCustomers.map((index, key) => (
+          <Line key={key}>
+            <Column style={{textAlign:'left'}}>{index.username}</Column>
+            <Column>{index.order}</Column>
+            <Column>{index.price}</Column>
+          </Line>
+        ))
+        }
       </Body>
     </TableArea>
   )
