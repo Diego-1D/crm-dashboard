@@ -20,12 +20,13 @@ export const Table = styled.table`
 
 export const Head = styled.thead`
     text-align: left;
-    background-color: #D9DCFA;
+    background-color:  #250BA2;
 `;
 
 export const HeadTitle = styled.th`
     font-size: 1rem;
     padding: 10px 5px;
+    color: #FFF;
 `;
 
 export const Body = styled.tbody`
@@ -33,7 +34,7 @@ export const Body = styled.tbody`
 
 export const Line = styled.tr`
    &:hover{
-        background-color: pink;
+    background-color: #D9DCFA;
     }
 `;
 
@@ -42,7 +43,7 @@ export const Column = styled.td`
 `;
 
 export const Pagination = styled.tfoot`
-right: 50px;
+    right: 50px;
     position: absolute;
     width: 500px;
     display: flex;
@@ -50,12 +51,15 @@ right: 50px;
 `;
 
 export const PaginationItem = styled.div`
-    width: 20px;
-    text-align: center;
-
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: ${props => props.active ? "#D9DCFA" : "transparent"};
+    border-radius: 50%;
     &:hover{
-        background-color: pink;
-        border-radius: 50%;
+        background-color: #D9DCFA;
         cursor: pointer;
     }
 `;

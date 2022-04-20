@@ -11,13 +11,14 @@ export const Title = styled.h2`
     color: #261F5B;
 `;
 
-export const Wrapper = styled.div`
-    width: 100%;
+export const Content = styled.div`
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+`;
+export const Wrapper = styled.div`
 `;
 
 export const TableArea = styled.div`
     display: flex;
 `;
+

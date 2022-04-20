@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TableArea = styled.table`
-    width: 500px;
+    width: 480px;
     background: #FFF;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 10px;
@@ -12,15 +12,17 @@ export const TableArea = styled.table`
 
 export const Title = styled.h1`
     font-size: 1.4rem;
+
 `;
 
 export const Head = styled.thead`
-    background-color: #D9DCFA;
+    background-color:  #250BA2;
 `;
 
 export const HeadTitle = styled.th`
     font-size: 1rem;
     padding: 10px 5px;
+    color: #FFF;
 `;
 
 export const Body = styled.tbody`
@@ -29,7 +31,7 @@ export const Body = styled.tbody`
 
 export const Line = styled.tr`
     &:hover{
-        background-color: pink;
+        background-color: #D9DCFA;
     }
 `;
 

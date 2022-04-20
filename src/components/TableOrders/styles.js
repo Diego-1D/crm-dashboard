@@ -14,12 +14,13 @@ export const Title = styled.h1`
 `;
 
 export const Head = styled.thead`
-    background-color: #D9DCFA;
+    background-color:  #250BA2;
 `;
 
 export const HeadTitle = styled.th`
     font-size: 1rem;
     padding: 10px 5px;
+    color: #FFF;
 `;
 
 export const Body = styled.tbody`
@@ -28,7 +29,7 @@ export const Body = styled.tbody`
 
 export const Line = styled.tr`
     &:hover{
-        background-color: pink;
+        background-color: #D9DCFA;
     }
 `;
 
