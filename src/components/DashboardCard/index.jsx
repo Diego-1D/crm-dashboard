@@ -2,34 +2,25 @@ import React from 'react';
 import {
     Card,
     Icon,
-    Name,
-    Value
+    Title,
+    Count, 
+    Wrapper
 } from './styles';
+
+import CardItem from '../../data/status-card-data.json'
 
 const DashboardCard = () => {
     return (
-        <>
-            <Card>
-                <Icon className='bx bx-shopping-bag'></Icon>
-                <Name>Custo Total</Name>
-                <Value>R$ 1.239,00</Value>
-            </Card>
-            <Card>
-                <Icon className='bx bx-shopping-bag'></Icon>
-                <Name>Custo Total</Name>
-                <Value>R$ 1.239,00</Value>
-            </Card>
-            <Card>
-                <Icon className='bx bx-shopping-bag'></Icon>
-                <Name>Custo Total</Name>
-                <Value>R$ 1.239,00</Value>
-            </Card>
-            <Card>
-                <Icon className='bx bx-shopping-bag'></Icon>
-                <Name>Custo Total</Name>
-                <Value>R$ 1.239,00</Value>
-            </Card>
-        </>
+        <Wrapper>
+            {CardItem.map((index, key) => (
+                <Card key={key}>
+                    <Icon className={index.icon}/>
+                    <Title>{index.title}</Title>
+                    <Count>{index.count}</Count>
+                </Card>
+            ))
+            }
+        </Wrapper>
     )
 }
 
