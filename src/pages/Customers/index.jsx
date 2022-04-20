@@ -48,7 +48,7 @@ const Customers = () => {
           <HeadTitle>Id</HeadTitle>
           <HeadTitle>Nome</HeadTitle>
           <HeadTitle>E-mail</HeadTitle>
-          <HeadTitle>Telefone</HeadTitle>
+          <HeadTitle style={{ textAlign: 'center' }}>Telefone</HeadTitle>
           <HeadTitle style={{ textAlign: 'center' }}>Total de pedidos</HeadTitle>
           <HeadTitle style={{ textAlign: 'center' }}>Total gastos</HeadTitle>
           <HeadTitle style={{ textAlign: 'center' }}>Local</HeadTitle>
@@ -59,7 +59,7 @@ const Customers = () => {
               <Column>{index.id}</Column>
               <Column>{index.name}</Column>
               <Column>{index.email}</Column>
-              <Column>{index.phone}</Column>
+              <Column style={{ textAlign: 'center' }}>{index.phone}</Column>
               <Column style={{ textAlign: 'center' }}>{index.total_orders}</Column>
               <Column style={{ textAlign: 'center' }}>{index.total_spend}</Column>
               <Column style={{ textAlign: 'center' }}>{index.location}</Column>
@@ -67,14 +67,16 @@ const Customers = () => {
           ))
           }
         </Body>
-
         {
           pages > 1 ? (
             <Pagination>
               {
                 range.map((item, key) => (
-                  <PaginationItem key={key}
-                    onClick={() => selectPage(key)}>
+                  <PaginationItem 
+                    key={key}
+                    onClick={() => selectPage(key)}
+                    active={nextPage == key}
+                    >
                     {item + 1}
                   </PaginationItem>
                 ))
