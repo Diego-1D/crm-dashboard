@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-
+    padding: 40px 0px;
 `;
 
-export const Title = styled.h1`
-    font-size: 1.4rem;
+export const Title = styled.h2`
+    color: #261F5B;
 `;
 
 export const Table = styled.table`

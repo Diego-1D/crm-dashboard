@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-    width: 300px;
+    width: 350px;
     height: 100vh;
     position: sticky;
     background-color: #250BA2;
@@ -32,13 +32,13 @@ export const HeaderOptions = styled(Link)`
     font-weight: 600;
     transition: color 0.3s ease 0s;
     cursor: pointer;
-    color: white;
+    color: ${props => props.active ? "#3D36CA" : "#FFF"};
     border-radius: 5px;
     text-decoration: none;
+    background-color: ${props => props.active ? "#FFF" : "transparent"};
 
     &:hover{
-        color: #3D36CA;
-        background-color: white;
+        color: #D9DCFA;
     }
 `;
 

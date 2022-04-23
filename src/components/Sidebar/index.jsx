@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Container,
   Header,
@@ -11,6 +11,8 @@ import {
 import Items from '../../data/sidebar_routes.json';
 
 const Sidebar = () => {
+
+  const [selected, setSelected] = useState('Painel')
 
   return (
     <Container>
@@ -26,6 +28,8 @@ const Sidebar = () => {
           <HeaderOptions
             to={item.route}
             key={index}
+            onClick={() => setSelected(item.display_name)}
+            active={selected === item.display_name}
           >
             <Icon className={item.icon} />
             <Title>{item.display_name}</Title>
