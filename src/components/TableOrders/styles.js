@@ -1,4 +1,8 @@
 import styled from "styled-components";
+export const TableWrapper = styled.div`
+    width: 100%;
+    overflow-y: auto;
+`;
 
 export const TableArea = styled.table`
     width: 800px;

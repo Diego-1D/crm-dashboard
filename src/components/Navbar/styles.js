@@ -20,7 +20,6 @@ export const RightArea = styled.div`
 `;
 
 export const Search = styled.div`
-    width: 300px;
     height: 45px;
     padding: 0 15px;
     display: flex;
