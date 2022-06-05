@@ -1,29 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
-    Container,
-    Icon, Input,
-    ImageIcon,
-    Search,
-    RightArea,
-    Text
+  Container,
+  Icon,
+  Menu
 } from './styles';
 
+import Sidebar from '../Sidebar'
+
 const Navbar = () => {
-    return (
-        <Container>
-            <Text>Bom dia, Diego</Text>
-            <RightArea>
-                <Search>
-                    <Icon className='bx bx-search'></Icon>
-                    <Input type='text' placeholder='Digite aqui...' />
-                </Search>
-                <ImageIcon 
-                src='https://avatars.githubusercontent.com/u/50786415?s=400&u=245c935a0c4567bc224f960be3efa86fcd8df10a&v=4' 
-                alt='Perfil'/>
-                <Icon style={{ fontSize: '2.2rem' }} className='bx bx-bell'></Icon>
-            </RightArea>
-        </Container>
-    )
+
+  const [isMenu, setIsMenu] = useState(false)
+
+  const toggle = () => {
+    setIsMenu(!isMenu)
+  }
+
+  return (
+    <Container>
+      <Menu onClick={toggle}> {
+        isMenu ?
+          <Icon className='bx bx-x' />
+          :
+          <Icon className='bx bx-menu' />
+      }
+      </Menu>
+      <Sidebar isMenu={isMenu} toggle={toggle} />
+    </Container>
+  )
 }
 
 export default Navbar;
