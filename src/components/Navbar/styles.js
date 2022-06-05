@@ -2,48 +2,32 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    height: 4rem;
+    padding: 0.5rem;
+    background-color: #250BA2;
+    display: none;
+
+    @media screen and (max-width: 1150px){
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
 `;
 
-export const Text = styled.label`
-   font-size: 1.2rem;
-   font-weight: bold;
-   color: #261F5B;
-`;
+export const Menu = styled.button`
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    display: none;
+    border-color: #FFF;
 
-export const RightArea = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 15px;
-`;
-
-export const Search = styled.div`
-    height: 45px;
-    padding: 0 15px;
-    display: flex;
-    align-items: center;
-    background-color: #FFF;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border-radius: 10px;
-    overflow: hidden;
-`;
-
-export const Input = styled.input`
-    height:100%;
-    width: 100%;
-    font-size: 1rem;
-    border: 2px solid transparent;
-    outline: 0;
+    @media screen and (max-width: 1150px){
+        display: block;
+    }
 `;
 
 export const Icon = styled.i`
-    font-size: 1.5rem;
-    margin-right: 5px;
-`;
-
-export const ImageIcon = styled.img`
-  width: 2.3rem;
-  border-radius: 50%;
+    font-size: 1.8rem;
+    color: #FFF;
 `;

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   Container,
   Header,
@@ -10,12 +10,12 @@ import {
 
 import Items from '../../data/sidebar_routes.json';
 
-const Sidebar = () => {
+const Sidebar = ({ isMenu }) => {
 
   const [selected, setSelected] = useState('Painel')
 
   return (
-    <Container>
+    <Container isMenu={isMenu}>
       <Header>
         <Icon
           className='bx bxs-store-alt'

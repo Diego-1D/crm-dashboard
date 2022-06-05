@@ -28,8 +28,8 @@ const TableGrafic = () => {
           options={chartOptions.options}
           series={chartOptions.series}
           type="bar"
-          width="420"
-          height="270"
+          width="100%"
+          height="250"
         />
       </Body>
     </Table>

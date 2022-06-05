@@ -1,21 +1,32 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    padding: 40px 0px;
+    height: 100vh;
+    padding: 40px 20px;
 `;
 
 export const Title = styled.h2`
     color: #261F5B;
 `;
 
+export const TableWrapper = styled.div`
+    width: 100%;
+    overflow-y: auto;
+    background: #FFF;
+    border-radius: 10px;
+    margin-top: 30px;
+`;
+
 export const Table = styled.table`
     width: 100%;
     background: #FFF;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border-radius: 10px;
     padding: 15px;
-    margin-top: 30px;
     border-spacing: 0;
+
+    @media screen and (max-width:926px){
+     width: 850px;
+    }
 `;
 
 export const Head = styled.thead`

@@ -6,7 +6,6 @@ import Latest_Orders from '../../data/latest_orders.json';
 const TableOrders = () => {
   return (
     <TableWrapper>
-
       <TableArea>
         <Head>
           <HeadTitle style={{ textAlign: 'left' }}>Id do pedido</HeadTitle>
