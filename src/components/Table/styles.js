@@ -1,18 +1,22 @@
 import styled from "styled-components";
 
-export const TableArea = styled.table`
-    width: 480px;
+export const TableWrapper = styled.div`
+    width: 100%;
+    overflow-y: auto;
     background: #FFF;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 10px;
-    padding: 15px;
-    border-spacing: 0;
     margin-bottom: 30px;
 `;
 
-export const Title = styled.h1`
-    font-size: 1.4rem;
+export const TableArea = styled.table`
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 15px;
+    border-spacing: 0;
 
+    @media screen and (max-width:550px){
+     width: 480px;
+    }
 `;
 
 export const Head = styled.thead`
@@ -26,7 +30,6 @@ export const HeadTitle = styled.th`
 `;
 
 export const Body = styled.tbody`
-
 `;
 
 export const Line = styled.tr`

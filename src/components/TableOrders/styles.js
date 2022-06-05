@@ -1,16 +1,21 @@
 import styled from "styled-components";
+
 export const TableWrapper = styled.div`
     width: 100%;
     overflow-y: auto;
+    background: #FFF;
+    border-radius: 10px;
 `;
 
 export const TableArea = styled.table`
-    width: 800px;
-    background: #FFF;
+    width: 100%;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    border-radius: 10px;
     padding: 15px;
     border-spacing: 0;
+
+    @media screen and (max-width:600px){
+     width: 800px;
+    }
 `;
 
 export const Title = styled.h1`

@@ -7,9 +7,16 @@ export const Container = styled.div`
     position: sticky;
     background-color: #250BA2;
     padding: 50px 20px;
-    box-shadow: rgba(149, 157, 165, 1) 3px 3px 30px;
     top: 0;
     bottom: 0;
+    left: 0;
+    z-index: 999;
+    
+    @media screen and (max-width: 1150px){
+        display:${({ isMenu }) => (isMenu ? '' : 'none')};
+        position: fixed; 
+        width: 300px;
+    } 
 `;
 
 export const Header = styled.div`
