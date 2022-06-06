@@ -13,15 +13,15 @@ export const TableWrapper = styled.div`
     width: 100%;
     overflow-y: auto;
     background: #FFF;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     margin-top: 30px;
+    padding: 0 15px;
 `;
 
 export const Table = styled.table`
     width: 100%;
     background: #FFF;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    padding: 15px;
+    padding-top: 15px;
     border-spacing: 0;
 
     @media screen and (max-width:926px){
@@ -53,12 +53,16 @@ export const Column = styled.td`
       padding: 10px 5px;
 `;
 
-export const Pagination = styled.tfoot`
-    right: 50px;
-    position: absolute;
-    width: 500px;
+export const Pagination = styled.div`
+    width: 100%;
+    height: 3rem;
     display: flex;
-    justify-content: space-between;
+    padding: 0 20px;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #FFF;
+    border-radius: 0 0 10px 10px;
+    gap: 1rem;
 `;
 
 export const PaginationItem = styled.div`

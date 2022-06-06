@@ -45,7 +45,6 @@ const Customers = () => {
     <Container>
       <Title>Clientes</Title>
       <TableWrapper>
-
         <Table>
           <Head>
             <HeadTitle>Id</HeadTitle>
@@ -70,26 +69,26 @@ const Customers = () => {
             ))
             }
           </Body>
-          {
-            pages > 1 ? (
-              <Pagination>
-                {
-                  range.map((item, key) => (
-                    <PaginationItem
-                      key={key}
-                      onClick={() => selectPage(key)}
-                      active={nextPage == key}
-                    >
-                      {item + 1}
-                    </PaginationItem>
-                  ))
-                }
-
-              </Pagination>
-            ) : null
-          }
         </Table>
-      </TableWrapper>
+        </TableWrapper>
+        {
+          pages > 1 ? (
+            <Pagination>
+              {
+                range.map((item, key) => (
+                  <PaginationItem
+                    key={key}
+                    onClick={() => selectPage(key)}
+                    active={nextPage == key}
+                  >
+                    {item + 1}
+                  </PaginationItem>
+                ))
+              }
+
+            </Pagination>
+          ) : null
+        }
     </Container>
   )
 }

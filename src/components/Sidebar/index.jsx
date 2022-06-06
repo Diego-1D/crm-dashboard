@@ -10,9 +10,14 @@ import {
 
 import Items from '../../data/sidebar_routes.json';
 
-const Sidebar = ({ isMenu }) => {
+const Sidebar = ({ isMenu, onSelect }) => {
 
   const [selected, setSelected] = useState('Painel')
+
+  const selectMenuItem = (displayName) => {
+    setSelected(displayName)
+    if (onSelect) onSelect()
+  }
 
   return (
     <Container isMenu={isMenu}>
@@ -28,7 +33,7 @@ const Sidebar = ({ isMenu }) => {
           <HeaderOptions
             to={item.route}
             key={index}
-            onClick={() => setSelected(item.display_name)}
+            onClick={() => selectMenuItem(item.display_name)}
             active={selected === item.display_name}
           >
             <Icon className={item.icon} />

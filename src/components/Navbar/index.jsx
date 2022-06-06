@@ -24,7 +24,7 @@ const Navbar = () => {
           <Icon className='bx bx-menu' />
       }
       </Menu>
-      <Sidebar isMenu={isMenu} toggle={toggle} />
+      <Sidebar isMenu={isMenu} onSelect={()=>setIsMenu(false)}/>
     </Container>
   )
 }
