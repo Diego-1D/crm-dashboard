@@ -16,7 +16,7 @@ function App() {
           <Navbar />
           <Header />
           <Routes>
-            <Route exact path="/crm-dashboard" element={<Dashboard />} />
+            <Route exact path="/" element={<Dashboard />} />
             <Route path="/customers" element={<Customers />} />
           </Routes>
         </Wrapper>
