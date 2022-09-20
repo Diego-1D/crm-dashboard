@@ -26,7 +26,7 @@ const Sidebar = ({ isMenu, onSelect }) => {
           className='bx bxs-store-alt'
           style={{ fontSize: '2.5rem' }}
         />
-        <Name>CRM - Client</Name>
+        <Name>CRM - Cliente</Name>
       </Header>
       {
         Items.map((item, index) => (
