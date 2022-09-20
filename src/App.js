@@ -9,7 +9,7 @@ import Customers from './pages/Customers';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Container>
         <Sidebar />
         <Wrapper>
